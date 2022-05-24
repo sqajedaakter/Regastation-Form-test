@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Login and Registration Form Design</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+<div class="login-page"> 
+    <div class="form">
+<form class="register-form">
+<input type="text" placeholder="User Name"/>
+<input type="text" placeholder="Password"/>
+<input type="text" placeholder="Email ID"/>
+<button>Create</button>
+<p class="message">Already Registered? <a href="#"> Login</a></p>
+</form>
+
+<form action="" name="demoForm" onsubmit="return validateForm()" class="login-form">
+    <input type="text" placeholder="User name"/>
+    <input type="text" placeholder="Password"/>
+    <input type="submit" value="Submit"/>
+    <button>Login</button>
+    <P class="message">Not Registered? <a href="#">Register</a></P>
+   </form>
+    </div>
+    </div>
+
+    <script src=" https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
+
+    <script>
+        $ ('.message a').click(function(){
+            $('form').animate({height:"toggle",opacity:"toggle"},"slow")
+        });
+function validateForm(){
+    let name = document.forms["demoForm"]["User name"].value;
+    let password = document.forms["demoForm"]["Password"].value;
+    if(name == ''&& password == '' ){
+        alert('Your field is empty');
+        return false;
+    }
+
+}
+
+    </script>
+
+    </body>
+</html>
